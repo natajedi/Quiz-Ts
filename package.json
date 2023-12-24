@@ -1,0 +1,37 @@
+{
+    "name": "30quiz",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "json-server --watch db.json --port 8081",
+        "lint": "eslint {src/**/*.ts,index.html}",
+        "build:dev": "npm run lint && webpack --mode=development",
+        "build:prod": "npm run lint && webpack --mode=production --node-env=production",
+        "serve": "webpack serve --open --mode development"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^6.13.1",
+        "@typescript-eslint/parser": "^6.13.1",
+        "css-loader": "^6.8.1",
+        "eslint": "^8.55.0",
+        "eslint-webpack-plugin": "^4.0.1",
+        "html-webpack-plugin": "^5.5.3",
+        "jest": "^29.7.0",
+        "mini-css-extract-plugin": "^2.7.6",
+        "style-loader": "^3.3.3",
+        "ts-jest": "^29.1.1",
+        "ts-loader": "^9.5.1",
+        "typescript": "^5.3.2",
+        "webpack": "^5.89.0",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.1"
+    },
+    "dependencies": {
+        "json-server": "^0.17.4"
+    }
+}
