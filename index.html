@@ -5,17 +5,28 @@
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Quiz App</title>
-   <link rel="stylesheet" href=".src/styles/style.css">
+  <link rel="stylesheet" href="../src/style.css">
 </head>
 <body>
-   <div id="quiz-container">
-       <h1 id="question-text"></h1>
-       <div id="answer-buttons"></div>
-       <button id="next-btn">Next</button>
-   </div>
- <script src="./src/index.ts"></script>
- <script src="./db.json"></script>
+ <div id="quiz-container">
+  <table id="quiz-table">
+    <thead>
+      <tr>
+        <th><h1 id="question-text"></h1></th>
+      </tr>
+    </thead>
+    <tbody>
+      <div id="answer-buttons"></div>
+    </tbody>
+   </table>
+   <button id="startButton">Start</button>
+   <button id="nextButton">Next</button>
+</div>
+<!--<script src="../index.js"></script>-->
+<script type="module" src="index.js"></script>
+<script src="../data/db.json"></script>
 </body>
 </html>
+
 
 
