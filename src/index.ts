@@ -3,7 +3,7 @@ import { UIService } from './services/UIService';
 import { QuestionModel } from './models/QuestionModel';
 import { QuizSessionModel } from './models/QuizSessionModel';
 
-let session: QuizSessionModel = new QuizSessionModel();
+let session: QuizSessionModel = new QuizSessionModel(0, [], 0, null);
 let question: QuestionModel | null = null;
 let showNextQuestion: boolean = false;
 
@@ -33,8 +33,9 @@ fetch('./dbjson')
      const answerId = parseInt(answerElement.dataset.id || "");
      const result = quizService.checkAnswer(session, answerId);
      session = result.session;
-     question = result.question;
-     showNextQuestion = result.showNextQuestion;
+     question = result.session.currentQuestion;
+     showNextQuestion = true;
+
      UIService.updateQuestionText(question);
      UIService.displayPossibleAnswers(question);
      UIService.updateScore(session);
